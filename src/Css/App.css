@@ -1,0 +1,23 @@
+*{font-family: "Gmarket";}
+body{background-color: #5a75e0;}
+.App{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.logo{
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 50px 0 30px;
+}
+/*main component*/
+.main{
+    width: 90vw;
+    height: 100%;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
