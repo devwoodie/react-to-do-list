@@ -5,8 +5,10 @@ import Main from "./Main";
 const App = () => {
     return (
         <div className="App">
-            <h1 className="logo">MY LIST</h1>
-            <Main />
+            <div className="container">
+                <h1 className="logo">MY LIST</h1>
+                <Main />
+            </div>
         </div>
     );
 }

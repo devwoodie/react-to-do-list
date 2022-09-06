@@ -1,23 +1,162 @@
 *{font-family: "Gmarket";}
-body{background-color: #5a75e0;}
+/*body{background-color: #5a75e0;}*/
 .App{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
+.container{
+    background-color: #5a75e0;
+    margin: 30px auto 0;
+    max-width: 600px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 40px 40px 0 0;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+}
 .logo{
     color: #fff;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: normal;
     margin: 50px 0 30px;
 }
-/*main component*/
+/* main component */
 .main{
-    width: 90vw;
+    width: 95%;
     height: 100%;
     background: #fff;
     margin: 0 auto;
     border-radius: 40px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    padding: 50px 40px;
+    position: relative;
+}
+.today-date{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #404040;
+}
+.task{
+    margin-top: 30px;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5a75e0;
+}
+.main-btn{
+    position: absolute !important;
+    right: 40px;
+    top: 50px;
+    transition: .4s;
+    animation: regist-btn .4s forwards;
+}
+/* list component */
+.list-wrap{
+    border-top: 1px solid #5a75e0;
+    padding: 50px 0 0;
+    margin-top: 20px;
+}
+.list-li{
+    margin-top: 40px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    position: relative;
+    z-index: 8;
+}
+.list-li:first-child{
+    margin: 0;
+}
+.list-li::after{
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #c4c4c4;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    transition: .4s;
+}
+.list-li.chk-ok{
+    font-size: 1.6rem;
+    color: #c4c4c4;
+}
+.list-li.chk-ok::after{
+    bottom: 50%;
+    transform: translateY(-50%);
+}
+.check-box{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #c4c4c4;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.check-ok{
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5a75e0;
+    margin-right: 20px;
+}
+.list-text{
+    transition: .4s;
+}
+.del-btn{
+    position: absolute;
+    right: 0; top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+}
+
+/* regist component */
+.regist-wrap{
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    bottom: 25%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: regist-btn .4s forwards;
+}
+.regist-input{
+    display: inline-block;
+    border: 1px solid #000;
+    border-width: 0 0 1px 0;
+    width: 80%;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+.regist-input:focus {
+    border-color:#5a75e0;
+    outline: none;
+}
+.regist-btn{
+    background-color: #5a75e0;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    margin-left: 20px;
+}
+.plus-ic{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+@keyframes regist-btn {
+    0%{opacity: 0;} 100%{opacity: 1;}
 }
