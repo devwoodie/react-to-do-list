@@ -18,6 +18,7 @@
 리스트의 갯수는 최대 5개까지 등록 가능하게 설정하였습니다.
 
 내용이 비어있는 상황에서 추가를 누르면 경고창이 나타납니다.
+
 ```
 
 ![image](https://user-images.githubusercontent.com/86578755/188575653-57b2c48b-c0a5-44df-b4ca-3e5b8bec1f0f.png)
