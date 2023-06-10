@@ -5,12 +5,18 @@ import {useState} from "react";
 
 const App = () => {
 
-    const [token, setToken] = useState("")
+    const [token, setToken] = useState("qs토wd큰ef입rg니th다oj")
 
     const handleCookie = () => {
-        const receivedToken = 'qs토wd큰ef입rg니th다oj';
-        document.cookie = `token=${receivedToken}; path=/`;
-        setToken(receivedToken);
+        document.cookie = `token=${token}; path=/`;
+        const cookies = get_cookie("token");
+        // console.log(cookies)
+        window.parent.postMessage(cookies, '*');
+    }
+    // 쿠키 가져오기
+    function get_cookie(name) {
+        let value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return value? value[2] : null;
     }
 
     return (
