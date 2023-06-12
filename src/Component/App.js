@@ -28,12 +28,18 @@ const App = () => {
         window.location.href = url;
     };
 
+    // 웹뷰 전송 로직
+    const postMessage = (data) => {
+        window.ReactNativeWebView?.postMessage(JSON.stringify({data}));
+    }
+
     return (
         <div className="App">
             <div className="container">
                 <h1 className="logo">MY LIST</h1>
                 <button onClick={handleCookie}>토큰 테스트 버튼</button>
                 <button onClick={handleButtonClick}>파라미터 테스트</button>
+                <button onClick={() => postMessage(token)}>메세지 보내기 버튼</button>
                 <Main />
             </div>
         </div>
